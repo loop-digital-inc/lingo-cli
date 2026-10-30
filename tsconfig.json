@@ -1,0 +1,20 @@
+{
+	"compilerOptions": {
+		"target": "ES2022",
+		"module": "NodeNext",
+		"moduleResolution": "NodeNext",
+		"lib": ["ES2023"],
+		"types": ["node"],
+		"strict": true,
+		"noUncheckedIndexedAccess": true,
+		"verbatimModuleSyntax": true,
+		"erasableSyntaxOnly": true,
+		"skipLibCheck": true,
+		// Sources import each other as `./file.ts`, so Node can run them as they are; the build
+		// rewrites those to `./file.js`.
+		"allowImportingTsExtensions": true,
+		"rewriteRelativeImportExtensions": true,
+		"noEmit": true
+	},
+	"include": ["src", "test"]
+}

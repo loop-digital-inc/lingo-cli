@@ -1,0 +1,30 @@
+{
+	"name": "@loop-digital/lingo",
+	"version": "0.1.0",
+	"description": "Command-line tool for Lingo: push and pull a project's translations from your codebase.",
+	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/loop-digital-inc/lingo-cli.git"
+	},
+	"type": "module",
+	"bin": {
+		"lingo": "dist/cli.js"
+	},
+	"files": [
+		"dist"
+	],
+	"engines": {
+		"node": ">=20.12"
+	},
+	"scripts": {
+		"build": "tsc -p tsconfig.build.json",
+		"check": "tsc --noEmit",
+		"test": "node --test \"test/*.test.ts\"",
+		"prepublishOnly": "npm run check && npm test && npm run build"
+	},
+	"devDependencies": {
+		"@types/node": "^24.0.0",
+		"typescript": "^6.0.3"
+	}
+}
